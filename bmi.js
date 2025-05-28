@@ -1,6 +1,12 @@
 function cal(){
             var height = parseFloat(document.getElementById('height').value);
             var weight = parseFloat(document.getElementById('weight').value);
+
+            if(isNaN(height) || isNaN(weight) || height<0 || weight<=0){
+                alert("Please enter Valid height and weight");
+                return;
+            }
+            
             var h = height * height
             var bmi = weight / (h);
             bmi = bmi.toFixed(2);
