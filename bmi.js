@@ -71,3 +71,10 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
   modal.style.display = "none";
 }
+
+//close using escape button
+document.addEventListener("keydown",function(event){
+  if(event.key === "Escape"){
+    modal.style.display = "none";
+  }
+});
